@@ -16,9 +16,9 @@ function About() {
           About David &amp; Louis
         </p>
         <form
+          className="text-left"
           name="contact"
           method="POST"
-          action="/success"
           data-netlify="true"
           className="py-8 text-left"
         >
