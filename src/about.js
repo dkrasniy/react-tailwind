@@ -1,13 +1,11 @@
-import React,{useState} from "react";
-import logo from "./logo.svg";
-import { ChevronLeft } from "react-feather";
-import { Link } from "react-router-dom";
+import React from 'react';
+import logo from './logo.svg';
+import { ChevronLeft } from 'react-feather';
+import {
+  Link,
+} from 'react-router-dom';
 
 function About() {
-
-  const [name,setName] = useState('')
-    const [message,setMessage] = useState('')
-
   return (
     <div className="App bg-gray-800 text-center min-h-screen items-center flex justify-around">
       <div>
@@ -15,36 +13,8 @@ function About() {
         <p className="text-white text-semibold text-lg">
           About David &amp; Louis
         </p>
-        <form
-          className="text-left"
-          name="contact"
-          method="POST"
-          data-netlify="true"
-          className="py-8 text-left"
-        >
-          <label className="block text-white w-full">
-            Your Name:{" "}
-            <input className="block rounded text-gray-900 p-3 w-full" type="text" name="name" value={name} onChange={(e)=>setName(e.target.value)} />
-          </label>
-
-          
-      
-         
-
-         
-            <label className="block text-white mt-4">
-              Message:{" "}
-              <textarea className="block rounded text-gray-900 p-3 w-full" name="message" value={message} onChange={(e)=>setMessage(e.target.value)}></textarea>
-            </label>
-          
-            <button className="bg-white block w-full w-full p-3 rounded my-4  hover:bg-gray-100" type="submit">Send</button>
-       
-        </form>
-
-        <Link className="text-gray-500 block" to="/">
-          <ChevronLeft width={18} className="inline" /> Go back home
-        </Link>
-      </div>
+        <Link className="text-gray-500 block" to="/"><ChevronLeft width={18} className="inline"/> Go back home</Link>
+        </div>
     </div>
   );
 }
