@@ -21,6 +21,9 @@ function About() {
           data-netlify-honeypot="bot-field"
           className="py-8 text-left"
         >
+           <input type="hidden" name="bot-field" />
+            <input type="hidden" name="form-name" value="contact" />
+           
           <label className="block text-white w-full">
             Your Name:{" "}
             <input
