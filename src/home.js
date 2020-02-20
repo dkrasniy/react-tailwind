@@ -1,10 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import { ChevronRight } from 'react-feather';
-import {
-  Link,
-} from 'react-router-dom';
-
+import { Link, Router } from "@reach/router";
 
 
 function Home() {

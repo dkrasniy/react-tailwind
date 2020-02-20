@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import logo from "./logo.svg";
 import { ChevronLeft } from "react-feather";
-import { Link } from "react-router-dom";
+import { Link, Router } from "@reach/router";
 
 function About() {
   const [name, setName] = useState("");
