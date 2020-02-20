@@ -1,12 +1,11 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import logo from "./logo.svg";
 import { ChevronLeft } from "react-feather";
 import { Link } from "react-router-dom";
 
 function About() {
-
-  const [name,setName] = useState('')
-    const [message,setMessage] = useState('')
+  const [name, setName] = useState("");
+  const [message, setMessage] = useState("");
 
   return (
     <div className="App bg-gray-800 text-center min-h-screen items-center flex justify-around">
@@ -17,28 +16,38 @@ function About() {
         </p>
         <form
           name="contact"
-          method="POST"
-          action="/success"
+          method="post"
           data-netlify="true"
+          data-netlify-honeypot="bot-field"
           className="py-8 text-left"
         >
           <label className="block text-white w-full">
             Your Name:{" "}
-            <input className="block rounded text-gray-900 p-3 w-full" type="text" name="name" value={name} onChange={(e)=>setName(e.target.value)} />
+            <input
+              className="block rounded text-gray-900 p-3 w-full"
+              type="text"
+              name="name"
+              value={name}
+              onChange={e => setName(e.target.value)}
+            />
           </label>
 
-          
-      
-         
+          <label className="block text-white mt-4">
+            Message:{" "}
+            <textarea
+              className="block rounded text-gray-900 p-3 w-full"
+              name="message"
+              value={message}
+              onChange={e => setMessage(e.target.value)}
+            ></textarea>
+          </label>
 
-         
-            <label className="block text-white mt-4">
-              Message:{" "}
-              <textarea className="block rounded text-gray-900 p-3 w-full" name="message" value={message} onChange={(e)=>setMessage(e.target.value)}></textarea>
-            </label>
-          
-            <button className="bg-white block w-full w-full p-3 rounded my-4  hover:bg-gray-100" type="submit">Send</button>
-       
+          <button
+            className="bg-white block w-full w-full p-3 rounded my-4  hover:bg-gray-100"
+            type="submit"
+          >
+            Send
+          </button>
         </form>
 
         <Link className="text-gray-500 block" to="/">
