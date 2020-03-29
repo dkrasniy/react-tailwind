@@ -10,6 +10,28 @@ function About() {
   return (
     <div className="App bg-gray-800 text-center min-h-screen items-center flex justify-around">
       <div>
+
+      <form name="contactform" method="POST" data-netlify="true">
+  <p>
+    <label>Your Name: <input type="text" name="name" /></label>   
+  </p>
+  <p>
+    <label>Your Email: <input type="email" name="email" /></label>
+  </p>
+  <p>
+    <label>Your Role: <select name="role[]" multiple>
+      <option value="leader">Leader</option>
+      <option value="follower">Follower</option>
+    </select></label>
+  </p>
+  <p>
+    <label>Message: <textarea name="message"></textarea></label>
+  </p>
+  <p>
+    <button type="submit">Send</button>
+  </p>
+</form>
+
         <img src={logo} className="w-64 mx-auto" alt="logo" />
         <p className="text-white text-semibold text-lg">
           About David &amp; Louis
